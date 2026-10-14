@@ -7,6 +7,9 @@
     "dev": "vite",
     "build":  "chmod +x node_modules/.bin/vite && vite build"
     "preview": "vite preview"
+
+"vercel-build": "npm ci && npm run build",
+
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
