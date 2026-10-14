@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build":  "chmod +x node_modules/.bin/vite && vite build"
+  
     "preview": "vite preview"
-
+"prebuild": "chmod +x node_modules/.bin/hexo",
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
 "vercel-build": "npm ci && npm run build",
 
   },
