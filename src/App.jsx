@@ -24,11 +24,11 @@ const WEDDING = {
 
 const photos = [
   { src: '/NDT_1100.jpg', alt: 'Khoảnh khắc ngày cưới' },
-  { src: '/public/NDT_1036.jpg', alt: 'Cô dâu chú rể bên nhau' },
-  { src: '/public/NDT_0868.jpg', alt: 'Kỷ niệm tình yêu' },
-  { src: '/public/NDT_0363.jpg', alt: 'Nụ cười hạnh phúc' },
-  { src: '/public/NDT_0800.jpg', alt: 'Ngày mình chung đôi' },
-  { src: '/public/NDT_0198.jpg', alt: 'Lễ cưới lãng mạn' }
+  { src: '/NDT_1036.jpg', alt: 'Cô dâu chú rể bên nhau' },
+  { src: '/NDT_0868.jpg', alt: 'Kỷ niệm tình yêu' },
+  { src: '/NDT_0363.jpg', alt: 'Nụ cười hạnh phúc' },
+  { src: '/NDT_0800.jpg', alt: 'Ngày mình chung đôi' },
+  { src: '/NDT_0198.jpg', alt: 'Lễ cưới lãng mạn' }
 ];
 
 function Lotus({ className = '' }) {
@@ -159,7 +159,7 @@ function App() {
       <div className="cover-card">
         <div className="cover-topline"><span>TRÂN TRỌNG KÍNH MỜI</span><span className="tiny-flower">❀</span></div>
         <div className="cover-art">
-          <img src="/public/NDT_0308.jpg" alt="Ảnh cưới của cô dâu chú rể" />
+          <img src="/NDT_0308.jpg" alt="Ảnh cưới của cô dâu chú rể" />
           <div className="cover-vignette" />
           <div className="cover-lotus"><Lotus /></div>
         </div>
@@ -237,7 +237,7 @@ function App() {
         <section className="story section-pad" id="story">
           <SectionTitle eyebrow="OUR STORY" title="Chuyện chúng mình" subtitle="Mỗi khoảnh khắc đều là một cánh hoa trong khu vườn tình yêu."/>
           <div className="story-layout">
-            <div className="story-photo story-photo-large"><img src={"/public/NDT_0830.jpg"} alt={"/public/NDT_0830.jpg"}/><span className="photo-caption">The beginning of us</span></div>
+            <div className="story-photo story-photo-large"><img src={"/NDT_0830.jpg"} alt={"/NDT_0830.jpg"}/><span className="photo-caption">The beginning of us</span></div>
             <div className="story-timeline">
               <article className="timeline-item"><span className="timeline-dot">01</span><div><small>NGÀY ĐẦU GẶP GỠ</small><h3>Một ánh nhìn, một nụ cười</h3><p>Từ một cuộc gặp gỡ bình thường, chúng mình tìm thấy một người khiến những ngày bình thường trở nên thật đặc biệt.</p></div></article>
               <article className="timeline-item"><span className="timeline-dot">02</span><div><small>NGÀY MÌNH THÀNH ĐÔI</small><h3>Chọn nhau mỗi ngày</h3><p>Cùng trưởng thành, cùng mơ ước và học cách yêu thương nhau bằng những điều giản dị nhất.</p></div></article>
@@ -321,7 +321,7 @@ function App() {
             <div className="gift-icon"><Gift/></div>
             <p className="gift-script">With love & gratitude</p>
             <h3>Gửi quà mừng cưới</h3>
-            <div className="bank-placeholder"><div className="qr-placeholder"><img src="/public/maqr.jpg" alt="Mã QR ngân hàng mừng cưới" className="maqr"/></div><div className="bank-details"><span>NGÂN HÀNG</span><strong>{WEDDING.bankName}</strong><span>CHỦ TÀI KHOẢN</span><strong>{WEDDING.accountName}</strong><span>SỐ TÀI KHOẢN</span><div className="account-row"><strong>{WEDDING.bankAccount}</strong><button className="copy-button" onClick={copyAccount} aria-label="Sao chép số tài khoản">{copied ? <Check/> : <Copy/>}{copied ? 'Đã sao chép' : 'Sao chép'}</button></div><span>NỘI DUNG CHUYỂN KHOẢN</span><strong>{WEDDING.transferNote}</strong></div></div>
+            <div className="bank-placeholder"><div className="qr-placeholder"><img src="/maqr.jpg" alt="Mã QR ngân hàng mừng cưới" className="maqr"/></div><div className="bank-details"><span>NGÂN HÀNG</span><strong>{WEDDING.bankName}</strong><span>CHỦ TÀI KHOẢN</span><strong>{WEDDING.accountName}</strong><span>SỐ TÀI KHOẢN</span><div className="account-row"><strong>{WEDDING.bankAccount}</strong><button className="copy-button" onClick={copyAccount} aria-label="Sao chép số tài khoản">{copied ? <Check/> : <Copy/>}{copied ? 'Đã sao chép' : 'Sao chép'}</button></div><span>NỘI DUNG CHUYỂN KHOẢN</span><strong>{WEDDING.transferNote}</strong></div></div>
             <p className="gift-thanks">Cảm ơn bạn đã gửi yêu thương đến chúng mình ♡</p>
           </div>
         </section>
