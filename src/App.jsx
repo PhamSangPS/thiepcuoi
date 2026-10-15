@@ -23,12 +23,12 @@ const WEDDING = {
 };
 
 const photos = [
-  { src: '/public/ab1.webp', alt: 'Khoảnh khắc ngày cưới' },
-  { src: '/public/ab2.webp', alt: 'Cô dâu chú rể bên nhau' },
-  { src: '/public/ab3.webp', alt: 'Kỷ niệm tình yêu' },
-  { src: '/public/ab4.webp', alt: 'Nụ cười hạnh phúc' },
-  { src: '/public/ab5.webp', alt: 'Ngày mình chung đôi' },
-  { src: '/public/ab6.webp', alt: 'Lễ cưới lãng mạn' }
+  { src: '/ab1.webp', alt: 'Khoảnh khắc ngày cưới' },
+  { src: '/ab2.webp', alt: 'Cô dâu chú rể bên nhau' },
+  { src: '/ab3.webp', alt: 'Kỷ niệm tình yêu' },
+  { src: '/ab4.webp', alt: 'Nụ cười hạnh phúc' },
+  { src: '/ab5.webp', alt: 'Ngày mình chung đôi' },
+  { src: '/ab6.webp', alt: 'Lễ cưới lãng mạn' }
 ];
 
 function Lotus({ className = '' }) {
@@ -159,7 +159,7 @@ function App() {
       <div className="cover-card">
         <div className="cover-topline"><span>TRÂN TRỌNG KÍNH MỜI</span><span className="tiny-flower">❀</span></div>
         <div className="cover-art">
-          <img src="/public/anhbia.webp" alt="Ảnh cưới của cô dâu chú rể" />
+          <img src="/anhbia.webp" alt="Ảnh cưới của cô dâu chú rể" />
           <div className="cover-vignette" />
           <div className="cover-lotus"><Lotus /></div>
         </div>
@@ -237,7 +237,7 @@ function App() {
         <section className="story section-pad" id="story">
           <SectionTitle eyebrow="OUR STORY" title="Chuyện chúng mình" subtitle="Mỗi khoảnh khắc đều là một cánh hoa trong khu vườn tình yêu."/>
           <div className="story-layout">
-            <div className="story-photo story-photo-large"><img src={"/public/anhtop.webp"} alt={"/public/anhtop.webp"}/><span className="photo-caption">The beginning of us</span></div>
+            <div className="story-photo story-photo-large"><img src={"/anhtop.webp"} alt={"/anhtop.webp"}/><span className="photo-caption">The beginning of us</span></div>
             <div className="story-timeline">
               <article className="timeline-item"><span className="timeline-dot">01</span><div><small>NGÀY ĐẦU GẶP GỠ</small><h3>Một ánh nhìn, một nụ cười</h3><p>Từ một cuộc gặp gỡ bình thường, chúng mình tìm thấy một người khiến những ngày bình thường trở nên thật đặc biệt.</p></div></article>
               <article className="timeline-item"><span className="timeline-dot">02</span><div><small>NGÀY MÌNH THÀNH ĐÔI</small><h3>Chọn nhau mỗi ngày</h3><p>Cùng trưởng thành, cùng mơ ước và học cách yêu thương nhau bằng những điều giản dị nhất.</p></div></article>
