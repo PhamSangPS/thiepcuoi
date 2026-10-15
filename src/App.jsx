@@ -23,12 +23,12 @@ const WEDDING = {
 };
 
 const photos = [
-  { src: '/NDT_1100.jpg', alt: 'Khoảnh khắc ngày cưới' },
-  { src: '/NDT_1036.jpg', alt: 'Cô dâu chú rể bên nhau' },
-  { src: '/NDT_0868.jpg', alt: 'Kỷ niệm tình yêu' },
-  { src: '/NDT_0363.jpg', alt: 'Nụ cười hạnh phúc' },
-  { src: '/NDT_0800.jpg', alt: 'Ngày mình chung đôi' },
-  { src: '/NDT_0198.jpg', alt: 'Lễ cưới lãng mạn' }
+  { src: '/public/ab1.webp', alt: 'Khoảnh khắc ngày cưới' },
+  { src: '/public/ab2.webp', alt: 'Cô dâu chú rể bên nhau' },
+  { src: '/public/ab3.webp', alt: 'Kỷ niệm tình yêu' },
+  { src: '/public/ab4.webp', alt: 'Nụ cười hạnh phúc' },
+  { src: '/public/ab5.webp', alt: 'Ngày mình chung đôi' },
+  { src: '/public/ab6.webp', alt: 'Lễ cưới lãng mạn' }
 ];
 
 function Lotus({ className = '' }) {
@@ -159,7 +159,7 @@ function App() {
       <div className="cover-card">
         <div className="cover-topline"><span>TRÂN TRỌNG KÍNH MỜI</span><span className="tiny-flower">❀</span></div>
         <div className="cover-art">
-          <img src="/NDT_0308.jpg" alt="Ảnh cưới của cô dâu chú rể" />
+          <img src="/public/anhbia.webp" alt="Ảnh cưới của cô dâu chú rể" />
           <div className="cover-vignette" />
           <div className="cover-lotus"><Lotus /></div>
         </div>
@@ -237,7 +237,7 @@ function App() {
         <section className="story section-pad" id="story">
           <SectionTitle eyebrow="OUR STORY" title="Chuyện chúng mình" subtitle="Mỗi khoảnh khắc đều là một cánh hoa trong khu vườn tình yêu."/>
           <div className="story-layout">
-            <div className="story-photo story-photo-large"><img src={"/NDT_0830.jpg"} alt={"/NDT_0830.jpg"}/><span className="photo-caption">The beginning of us</span></div>
+            <div className="story-photo story-photo-large"><img src={"/public/anhtop.webp"} alt={"/public/anhtop.webp"}/><span className="photo-caption">The beginning of us</span></div>
             <div className="story-timeline">
               <article className="timeline-item"><span className="timeline-dot">01</span><div><small>NGÀY ĐẦU GẶP GỠ</small><h3>Một ánh nhìn, một nụ cười</h3><p>Từ một cuộc gặp gỡ bình thường, chúng mình tìm thấy một người khiến những ngày bình thường trở nên thật đặc biệt.</p></div></article>
               <article className="timeline-item"><span className="timeline-dot">02</span><div><small>NGÀY MÌNH THÀNH ĐÔI</small><h3>Chọn nhau mỗi ngày</h3><p>Cùng trưởng thành, cùng mơ ước và học cách yêu thương nhau bằng những điều giản dị nhất.</p></div></article>
@@ -266,7 +266,11 @@ function App() {
           </div>
           <p className="gallery-footnote"><Sparkles size={14}/> Hành trình chụp ảnh của chúng mình sẽ tiếp tục thật nhiều ảnh</p>
         </section>
-        <div className="event-photo">
+
+        <section className="event section-pad" id="event">
+          <SectionTitle eyebrow="JOIN OUR CELEBRATION" title="Ngày vui của chúng mình" subtitle="Sự có mặt của bạn sẽ làm ngày vui thêm trọn vẹn."/>
+          <div className="event-card">
+            <div className="event-photo">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4703.832243331612!2d106.45415899999999!3d10.875461999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDUyJzMxLjciTiAxMDbCsDI3JzE1LjAiRQ!5e1!3m2!1sen!2s!4v1791996628316!5m2!1sen!2s"
     title="Bản đồ địa điểm tổ chức"
@@ -275,10 +279,6 @@ function App() {
     referrerPolicy="no-referrer-when-downgrade"
   />
 </div>
-        <section className="event section-pad" id="event">
-          <SectionTitle eyebrow="JOIN OUR CELEBRATION" title="Ngày vui của chúng mình" subtitle="Sự có mặt của bạn sẽ làm ngày vui thêm trọn vẹn."/>
-          <div className="event-card">
-            
             <div className="event-info">
               <span className="event-label">WEDDING RECEPTION</span>
               <h3>Tiệc mừng thành hôn</h3>
@@ -291,41 +291,11 @@ function App() {
           <div className="event-note"><Flower2/><span>Địa điểm cực nhiều hạnh phúc</span></div>
         </section>
 
-        <section className="rsvp section-pad" id="rsvp">
-          <div className="rsvp-decor rsvp-decor-left"><Lotus/></div><div className="rsvp-decor rsvp-decor-right"><Lotus/></div>
-          <SectionTitle eyebrow="KINDLY RSVP" title="Bạn sẽ đến chung vui chứ?" subtitle="Hãy cho chúng mình biết để chuẩn bị đón tiếp bạn chu đáo nhất nhé."/>
-          {!rsvpSent ? <form className="rsvp-form" onSubmit={submitRsvp}>
-            <label>Họ và tên của bạn<input value={rsvp.name} onChange={e => setRsvp({...rsvp, name:e.target.value})} placeholder="Nhập họ tên..." required/></label>
-            <label>Bạn có thể tham dự không?<select value={rsvp.attendance} onChange={e => setRsvp({...rsvp, attendance:e.target.value})}><option value="yes">Có, mình sẽ đến!</option><option value="no">Rất tiếc, mình không thể đến</option><option value="maybe">Mình sẽ xác nhận sau</option></select></label>
-            <label>Số người tham dự<select value={rsvp.guests} onChange={e => setRsvp({...rsvp, guests:e.target.value})}><option value="1">1 người</option><option value="2">Tôi Và Người thương</option><option value="3">3 người</option><option value="4">4 người</option><option value="5+">5 người trở lên</option></select></label>
-            <label>Lời nhắn gửi đến cô dâu chú rể<textarea rows="3" value={rsvp.message} onChange={e => setRsvp({...rsvp, message:e.target.value})} placeholder="Gửi đôi lời yêu thương..."/></label>
-            <button className="button button-primary form-submit" type="submit"><Send size={16}/> GỬI XÁC NHẬN</button>
-           
-          </form> : <div className="success-message"><span><Check/></span><h3>Cảm ơn bạn thật nhiều!</h3><p>Chúng mình đã ghi nhận phản hồi trên thiết bị này. Hẹn gặp bạn trong ngày vui nhé.</p><button className="text-button" onClick={() => setRsvpSent(false)}>Chỉnh sửa phản hồi</button></div>}
-        </section>
+        
 
-        <section className="wishes section-pad">
-          <SectionTitle eyebrow="LOVE NOTES" title="Gửi lời chúc yêu thương" subtitle="Mỗi lời chúc là một món quà nhỏ mà chúng mình luôn trân quý."/>
-          <form className="wish-form" onSubmit={submitWish}>
-            <input aria-label="Tên người gửi lời chúc" placeholder="Tên của bạn" value={wish.name} onChange={e => setWish({...wish,name:e.target.value})} required/>
-            <textarea aria-label="Lời chúc" placeholder="Viết lời chúc của bạn..." rows="3" value={wish.message} onChange={e => setWish({...wish,message:e.target.value})} required/>
-            <button className="button button-outline" type="submit"><Heart size={16}/> GỬI LỜI CHÚC</button>
-          </form>
-          <div className="wishes-list">{wishes.length ? wishes.map(item => <article className="wish-card" key={item.id}><Heart size={17}/><div><strong>{item.name}</strong><p>{item.message}</p></div></article>) : <div className="empty-wishes"><Flower2/><p>Hãy là người đầu tiên gửi lời chúc cho chúng mình nhé!</p></div>}</div>
-          
-        </section>
+        
 
-        <section className="gift-section section-pad" id="gift">
-          <SectionTitle eyebrow="A LITTLE GIFT" title="Mừng cưới online" subtitle="Sự hiện diện của bạn đã là món quà quý giá. Nếu thuận tiện, bạn có thể gửi lời chúc qua thông tin bên dưới."/>
-          <div className="gift-card">
-            <div className="gift-icon"><Gift/></div>
-            <p className="gift-script">With love & gratitude</p>
-            <h3>Gửi quà mừng cưới</h3>
-            <div className="bank-placeholder"><div className="qr-placeholder"><img src="/maqr.jpg" alt="Mã QR ngân hàng mừng cưới" className="maqr"/></div><div className="bank-details"><span>NGÂN HÀNG</span><strong>{WEDDING.bankName}</strong><span>CHỦ TÀI KHOẢN</span><strong>{WEDDING.accountName}</strong><span>SỐ TÀI KHOẢN</span><div className="account-row"><strong>{WEDDING.bankAccount}</strong><button className="copy-button" onClick={copyAccount} aria-label="Sao chép số tài khoản">{copied ? <Check/> : <Copy/>}{copied ? 'Đã sao chép' : 'Sao chép'}</button></div><span>NỘI DUNG CHUYỂN KHOẢN</span><strong>{WEDDING.transferNote}</strong></div></div>
-            <p className="gift-thanks">Cảm ơn bạn đã gửi yêu thương đến chúng mình ♡</p>
-          </div>
-        </section>
-
+        
         <section className="closing">
           <div className="closing-photo"/>
           <div className="closing-content"><Lotus/><p>Two hearts, one beautiful journey.</p><h2>Hẹn gặp bạn<br/>trong ngày hạnh phúc!</h2><span>{WEDDING.bride} & {WEDDING.groom}</span><small>25 · 10 · 2026</small></div>
