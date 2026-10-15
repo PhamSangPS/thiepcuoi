@@ -23,7 +23,7 @@ const WEDDING = {
 };
 
 const photos = [
-  { src: '/public/NDT_1100.jpg', alt: 'Khoảnh khắc ngày cưới' },
+  { src: '/NDT_1100.jpg', alt: 'Khoảnh khắc ngày cưới' },
   { src: '/public/NDT_1036.jpg', alt: 'Cô dâu chú rể bên nhau' },
   { src: '/public/NDT_0868.jpg', alt: 'Kỷ niệm tình yêu' },
   { src: '/public/NDT_0363.jpg', alt: 'Nụ cười hạnh phúc' },
@@ -266,11 +266,19 @@ function App() {
           </div>
           <p className="gallery-footnote"><Sparkles size={14}/> Hành trình chụp ảnh của chúng mình sẽ tiếp tục thật nhiều ảnh</p>
         </section>
-
+        <div className="event-photo">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4703.832243331612!2d106.45415899999999!3d10.875461999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDUyJzMxLjciTiAxMDbCsDI3JzE1LjAiRQ!5e1!3m2!1sen!2s!4v1791996628316!5m2!1sen!2s"
+    title="Bản đồ địa điểm tổ chức"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
         <section className="event section-pad" id="event">
           <SectionTitle eyebrow="JOIN OUR CELEBRATION" title="Ngày vui của chúng mình" subtitle="Sự có mặt của bạn sẽ làm ngày vui thêm trọn vẹn."/>
           <div className="event-card">
-            <div className="event-photo"><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4703.832243331612!2d106.45415899999999!3d10.875461999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDUyJzMxLjciTiAxMDbCsDI3JzE1LjAiRQ!5e1!3m2!1sen!2s!4v1791996628316!5m2!1sen!2s" height="500" width="450"></iframe></div>
+            
             <div className="event-info">
               <span className="event-label">WEDDING RECEPTION</span>
               <h3>Tiệc mừng thành hôn</h3>
