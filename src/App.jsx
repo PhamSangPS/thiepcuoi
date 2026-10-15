@@ -23,12 +23,12 @@ const WEDDING = {
 };
 
 const photos = [
-  { src: 'ab1.webp', alt: 'Khoảnh khắc ngày cưới' },
-  { src: 'ab2.webp', alt: 'Cô dâu chú rể bên nhau' },
-  { src: 'ab3.webp', alt: 'Kỷ niệm tình yêu' },
-  { src: 'ab4.webp', alt: 'Nụ cười hạnh phúc' },
-  { src: 'ab5.webp', alt: 'Ngày mình chung đôi' },
-  { src: 'ab6.webp', alt: 'Lễ cưới lãng mạn' }
+  { src: '/ab1.webp', alt: 'Khoảnh khắc ngày cưới' },
+  { src: '/ab2.webp', alt: 'Cô dâu chú rể bên nhau' },
+  { src: '/ab3.webp', alt: 'Kỷ niệm tình yêu' },
+  { src: '/ab4.webp', alt: 'Nụ cười hạnh phúc' },
+  { src: '/ab5.webp', alt: 'Ngày mình chung đôi' },
+  { src: '/ab6.webp', alt: 'Lễ cưới lãng mạn' }
 ];
 
 function Lotus({ className = '' }) {
